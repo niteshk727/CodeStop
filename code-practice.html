@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Practice</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-x1c7uH8E/K7AO1l7fQmyIVQeBDc4/mOcR5mSaeIsGPJkKzQmCB1ViSVtOxrMprz5ywdYmi5Dg5h9k1z1o29cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/compile-java/1.0.1/compile-java.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="code-practice.html">Code Practice</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="container">
+        <main>
+            <h1>Coding Practice Questions</h1>
+
+            <!-- Question 1 -->
+            <div class="question">
+                <h2>Question 1: Array Subset Problem</h2>
+                <pre><code>
+Given an array, 'ARR' of 'N' integers, print “true” if it is possible to split the array into some finite number of subsets such that each subset has the same integer in it and all subsets have the same size. The size of the subset should be greater than one.
+
+Example:
+Input: ARR = [1, 2, 4, 4, 1, 2]
+Output: true
+                </code></pre>
+
+                <button class="toggle-solution">Show Solution</button>
+                <div class="solution" style="display: none;">
+                    <h3>Solution:</h3>
+                    <div id="editor1" class="code-editor"></div>
+                    <button class="run-code" data-editor="editor1">Run Code</button>
+                    <pre class="output" id="output1"></pre>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h2>Question 2: Find Missing Number</h2>
+                <pre><code>
+Given an array containing n distinct numbers in the range [0, n], find the one number that is missing from the array.
+
+Example:
+Input: ARR = [3, 0, 1]
+Output: 2
+                </code></pre>
+
+                <button class="toggle-solution">Show Solution</button>
+                <div class="solution" style="display: none;">
+                    <h3>Solution:</h3>
+                    <div id="editor2" class="code-editor"></div>
+                    <button class="run-code" data-editor="editor2">Run Code</button>
+                    <pre class="output" id="output2"></pre>
+                </div>
+            </div>
+        </main>
+
+        <aside class="ad-area left-ad">
+            <p>Google Ad Placeholder</p>
+        </aside>
+        
+        <aside class="ad-area right-ad">
+            <p>Google Ad Placeholder</p>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Coding Practice Site</p>
+    </footer>
+
+    <script>
+        // Initialize code editors
+        const editors = document.querySelectorAll('.code-editor');
+        editors.forEach((editor, index) => {
+            const aceEditor = ace.edit(editor.id);
+            aceEditor.setTheme("ace/theme/github");
+            aceEditor.session.setMode("ace/mode/java");
+            aceEditor.setValue("// Write your Java code here...", -1);
+        });
+
+        // Toggle solution display
+        document.querySelectorAll('.toggle-solution').forEach(button => {
+            button.addEventListener('click', function() {
+                const solution = this.nextElementSibling;
+                solution.style.display = solution.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+
+        // Run code button event listener
+        document.querySelectorAll('.run-code').forEach(button => {
+            button.addEventListener('click', function() {
+                const editorId = this.getAttribute('data-editor');
+                const editor = ace.edit(editorId);
+                const code = editor.getValue();
+
+                // Compile and run the Java code
+                compileJava(code)
+                    .then(result => {
+                        const outputId = 'output' + editorId.replace('editor', '');
+                        document.getElementById(outputId).textContent = result;
+                    })
+                    .catch(error => {
+                        const outputId = 'output' + editorId.replace('editor', '');
+                        document.getElementById(outputId).textContent = 'Error: ' + error.message;
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
