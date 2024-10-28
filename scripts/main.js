@@ -1,6 +1,7 @@
 // Array of question file names with descriptive titles
 const questions = [
-    { title: "Split Array into the Subsets", filename: "Split Array into the Subsets.md" }
+    { title: "Split Array into the Subsets", filename: "Split Array into the Subsets.md" },
+    { title: "Factorial of a Number", filename: "Factorial of a Number.md" }
     // Add more questions here as needed
 ];
 

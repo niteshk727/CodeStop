@@ -1,4 +1,4 @@
-# Problem Statement
+### Problem Statement
 
 Given an array, `ARR` of `N` integers, print **“true”** if it is possible to split the array into some finite number of subsets such that:
 1. Each subset has the same integer in it.
