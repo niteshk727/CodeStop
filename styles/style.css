@@ -63,3 +63,9 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.java-solution {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
