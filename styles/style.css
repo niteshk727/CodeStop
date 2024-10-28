@@ -1,72 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    padding-top: 56px; /* Space for fixed navbar */
 }
 
-.navbar {
-    background-color: #4CAF50; /* Green */
-    overflow: hidden;
+.ad-placeholder {
+    background-color: #f8f9fa; /* Light gray background */
+    border: 1px dashed #ccc; /* Dashed border */
+    height: 200px; /* Set height for ads */
+    margin-bottom: 20px; /* Space below the ad */
 }
 
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.navbar li {
-    float: left;
-}
-
-.navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.navbar li a:hover {
-    background-color: #45a049; /* Darker green */
-}
-
-.container {
-    display: flex;
-    padding: 20px;
-    width: 100%;
-}
-
-main {
-    flex: 1; /* Take up remaining space */
-    padding: 20px;
-}
-
-.ad-area {
-    width: 200px; /* Fixed width for ad areas */
-    background-color: #f1f1f1; /* Light grey */
-    padding: 10px;
-    margin: 0 10px;
-    text-align: center;
-}
-
-.coding-giphy {
-    max-width: 100%; /* Responsive image */
-    height: auto;
-}
-
-footer {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.java-solution {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
