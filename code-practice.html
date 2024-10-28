@@ -4,38 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-adsense-account" content="ca-pub-4440982006098227">
-    <title>CodeStop - Code Practice</title>
-    <link rel="stylesheet" href="styles/style.css"> <!-- Your CSS file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script> <!-- Marked Library -->
-    <script src="scripts/main.js"></script> <!-- Your JavaScript file -->
+    <title>Code Practice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script> <!-- Include Marked.js -->
+    <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
-    <main>
-        <h1>Split Array into the Subsets</h1>
-        <div id="questions-container">
-            <!-- Questions will be injected here -->
+
+    <!-- Main Content Area -->
+    <div class="container mt-5 pt-5">
+        <h1>Code Practice Questions</h1>
+
+        <!-- Code Question Section -->
+        <div id="question-container" class="mb-4"></div>
+
+        <!-- Google Ad Placeholder -->
+        <div class="ad-placeholder">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4440982006098227"
+                crossorigin="anonymous"></script>
+            <!-- Horizontal Ads -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4440982006098227"
+                data-ad-slot="9190681692" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
 
-        <script async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4440982006098227"
-            crossorigin="anonymous"></script>
-        <!-- Horizontal Ads -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4440982006098227"
-            data-ad-slot="9190681692" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <!-- Collapsible Solution Section -->
+        <div class="mb-4">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#solution"
+                aria-expanded="false" aria-controls="solution">
+                Show Solution
+            </button>
+            <div class="collapse" id="solution">
+                <div class="card card-body">
+                    <h5>Solution</h5>
+                    <pre><code id="solution-code" class="language-java"></code></pre>
+                </div>
+            </div>
+        </div>
 
-        <h2>Solution:</h2>
-        <pre id="java-solution"></pre> <!-- Area for the Java solution -->
-    </main>
+    </div>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 CodeStop</p>
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="text-center p-3 bg-light">
+            © 2024 CodeStop
+        </div>
     </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
